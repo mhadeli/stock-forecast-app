@@ -2,7 +2,7 @@
 
 This Streamlit app predicts the future stock prices for selected companies using the Prophet model. It allows users to select a stock, view historical data, and generate forecasts for a specified number of years.
 
-![App Screenshots](Screenshots/Stock price prediction.png)
+![Stock Price Prediction](Screenshots/Stock%20price%20prediction.png)
 
 
 ## Features
