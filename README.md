@@ -1,53 +1,84 @@
-# Stock Market Prediction App
+# Stock Price Prediction App
 
-## Description
-
-The Stock Market Prediction App is a web application built using Streamlit, yfinance, and Prophet for time series forecasting. It allows users to select a stock, choose the number of years for prediction, and visualizes the raw stock data along with forecasted data using Facebook Prophet.
+This Streamlit app predicts the future stock prices for selected companies using the Prophet model. It allows users to select a stock, view historical data, and generate forecasts for a specified number of years.
 
 ## Features
 
-- Select from a list of stocks for prediction.
-- Choose the number of years for forecasting.
-- Visualize raw stock data with an interactive Plotly chart.
-- Utilize Prophet for time series forecasting.
-- Display forecast data and components.
+- **Select Stock Dataset**: Choose from a list of predefined stocks to predict.
+- **Historical Data Display**: View the raw historical data for the selected stock.
+- **Interactive Plots**: Visualize the historical stock prices with interactive plots.
+- **Future Predictions**: Generate and display future stock price predictions using the Prophet model.
+- **Forecast Components**: View components of the forecast such as trends and seasonality.
 
-## Getting Started
+## Installation
 
-### Prerequisites
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/stock-price-prediction-app.git
+    cd stock-price-prediction-app
+    ```
 
-- Python 3.6 or higher
-- Install required dependencies:
+2. **Create a virtual environment**:
+    ```bash
+    python -m venv venv
+    ```
 
+3. **Activate the virtual environment**:
+    - On Windows:
+        ```bash
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source venv/bin/activate
+        ```
 
-```sh
-  pip install -r requirements.txt
-```
+4. **Install the required packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-### Running the app
+## Usage
 
-```sh
-   python -m streamlit run main.py
-```
+1. **Run the Streamlit app**:
+    ```bash
+    streamlit run app.py
+    ```
 
-- Visit the provided URL in your web browser to interact with the app.
+2. **Open your web browser** and navigate to `http://localhost:8501` to access the app.
 
-### Usage
+## File Structure
 
-- Select a stock from the dropdown menu.
-- Choose the number of years for prediction using the slider.
-- Explore raw data, forecast data, and components.
-- Visualize the data using interactive charts.
+- `app.py`: Main application file containing the Streamlit app.
+- `requirements.txt`: List of Python packages required to run the app.
 
-### Data Source
-- Yahoo Finance
+## How It Works
 
-### Libraries Used
+1. **Data Fetching**: The app fetches historical stock data from Yahoo Finance starting from January 1, 2015, to the current date.
+2. **Data Visualization**: Displays the raw data and an interactive plot of the historical stock prices.
+3. **Model Training**: Uses the Prophet model to train on the historical stock price data.
+4. **Forecasting**: Generates future stock price predictions based on the trained model.
+5. **Plotting Forecasts**: Displays the forecasted stock prices and their components.
 
-- Streamlit
-- yfinance
-- Prophet
-- Plotly
+## Dependencies
 
-### License
-This project is licensed under the MIT License.
+- `streamlit`: For creating the web application.
+- `yfinance`: For fetching historical stock data.
+- `prophet`: For time series forecasting.
+- `plotly`: For interactive data visualization.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Streamlit](https://streamlit.io/)
+- [Yahoo Finance](https://finance.yahoo.com/)
+- [Prophet](https://facebook.github.io/prophet/)
+- [Plotly](https://plotly.com/)
+
